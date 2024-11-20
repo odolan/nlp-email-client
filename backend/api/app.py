@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS from flask-cors
 from backend.models.summarizer.run_summarizer import Summarizer
 from backend.models.classifier.run_classifier import Classifier
 
@@ -10,6 +11,8 @@ python -m backend.api.app
 
 # initialize the flask app
 app = Flask(__name__)
+# apply cors to allow web access
+CORS(app)
 
 # load the models
 summarizer = Summarizer()
