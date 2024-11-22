@@ -1,6 +1,7 @@
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 import torch
 
+# path to the fine tuned model
 FINE_TUNED_MODEL_PATH = "backend/models/summarizer/saved_t5_summary_model"
 
 
