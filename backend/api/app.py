@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import CORS from flask-cors
-from backend.models.summarizer.run_summarizer import Summarizer
+from backend.models.summarizer.run_summarizer_t5 import Summarizer
 from backend.models.classifier.run_classifier import Classifier
 
 """

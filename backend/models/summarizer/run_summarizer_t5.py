@@ -8,14 +8,14 @@ FINE_TUNED_MODEL_PATH = "backend/models/summarizer/saved_t5_summary_model"
 # class Summarizer 
 class Summarizer:
 
-    def __init__(self):
+    def __init__(self, path=FINE_TUNED_MODEL_PATH):
 
         # Define the devie
         self.device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
         # Load the fine-tuned model for testing
-        self.model = T5ForConditionalGeneration.from_pretrained(FINE_TUNED_MODEL_PATH)
-        self.tokenizer = T5Tokenizer.from_pretrained(FINE_TUNED_MODEL_PATH)
+        self.model = T5ForConditionalGeneration.from_pretrained(path)
+        self.tokenizer = T5Tokenizer.from_pretrained(path)
 
         # Move the model to the appropriate device
         self.model.to(self.device)
