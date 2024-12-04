@@ -23,7 +23,7 @@ CORS(app)
 
 # load the models
 summarizer = Summarizer()
-classifier = Classifier()
+classifier = Classifier(path="backend/models/classifier/naive_bayes_model.json")
 gpt_classifier = GPTClassifier(api_key=OPENAI_API_KEY) 
 
 # define the classify endpoint
