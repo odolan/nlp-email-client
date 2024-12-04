@@ -4,8 +4,8 @@ import re
 
 class Classifier:
 
-    def __init__(self):
-        with open("backend/models/classifier/naive_bayes_model.json", "r") as file:
+    def __init__(self, path : str):
+        with open(path, "r") as file:
             self.model_params = json.load(file)
 
         self.spam_prior = self.model_params["spam_prior"]
