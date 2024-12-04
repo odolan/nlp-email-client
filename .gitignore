@@ -1,0 +1,30 @@
+# Ignore environment files
+backend/api/.env
+
+# Byte-compiled Python files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env/
+
+# Log files
+*.log
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Node modules (for frontend or other JS-related dependencies)
+frontend/node_modules/
+
+# Cache and build artifacts
+*.cache/
+dist/
+build/
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db
