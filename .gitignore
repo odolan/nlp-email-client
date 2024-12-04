@@ -1,5 +1,6 @@
 # Ignore environment files
 backend/api/.env
+backend/models/classifier/.env
 
 # Byte-compiled Python files
 __pycache__/
