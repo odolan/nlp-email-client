@@ -55,7 +55,7 @@ Please reference the below structure to understand how the code functions
 ## Project Setup
 To run this project, follow the steps below:
 
-### Configure the Environment
+### 1. Configure Environment
 
 Create a `.env` file in the project root directory and add your **OpenAI API key**:
 ```
@@ -64,20 +64,21 @@ OPENAI_API_KEY=your_openai_api_key
 
 ---
 
-## Running the Project Demo
+## Running the Demo
 
 ### Backend Setup
 Navigate to the project root directory and start the backend:
-\`\`\`bash
+```
 python -m backend.api.app
-\`\`\`
+```
+
 
 ### Frontend Setup
 Navigate to the `frontend` directory and start the frontend:
-\`\`\`bash
+```
 cd frontend
 npm run dev
-\`\`\`
+```
 
 ### View the Live Site
 The live site will be available at:  
