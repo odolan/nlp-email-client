@@ -58,9 +58,9 @@ To run this project, follow the steps below:
 ### Configure the Environment
 
 Create a `.env` file in the project root directory and add your **OpenAI API key**:
-\`\`\`bash
+```
 OPENAI_API_KEY=your_openai_api_key
-\`\`\`
+```
 
 ---
 
