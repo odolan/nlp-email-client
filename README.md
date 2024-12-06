@@ -18,6 +18,7 @@ We explore various machine learning and natural language processing (NLP) models
 ## Project Structure
 Please reference the below structure to understand how the code functions
 
+```
 .
 ├── backend
 │   ├── api
@@ -47,6 +48,8 @@ Please reference the below structure to understand how the code functions
 │               # call saved models for use in API
 └── frontend
     # contains nextJS project which can be run by instructions below
+
+```
 
 
 ## Project Setup
