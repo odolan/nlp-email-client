@@ -1,11 +1,83 @@
-# NLP Email Client
 
-This repository contains a project for summarizing emails and classifying them as spam or not spam using NLP models. 
+# Email Spam Classification and Summarization Project
 
-## Prerequisites
+This project aims to classify emails as **Spam** or **Not Spam** and summarize their content to make them more digestible for users. The goal is to provide a solution that helps users, particularly older adults, quickly identify and understand the nature of their emails.
 
-Make sure you have the following installed on your machine:
+We explore various machine learning and natural language processing (NLP) models to achieve this:
 
-1. Some files in this repository are tracked using [Git Large File Storage (Git LFS)](https://git-lfs.github.com). Make sure to install this to download models fully
-2. **Git LFS**: [Install Git LFS](https://git-lfs.github.com)
+- **Spam Classification**:
+  - **Naive Bayes**: A simple, traditional machine learning approach.
+  - **GPT-3.5**: A state-of-the-art language model by OpenAI, fine-tuned for spam classification.
+  
+- **Email Summarization**:
+  - **GPT-2**: An earlier generation of the GPT family, fine-tuned for text summarization.
+  - **T5**: A powerful transformer model designed for various text generation tasks, including summarization.
 
+---
+
+## Project Structure 
+Please reference the below structure to understand how the code functions 
+
+**/backend** 
+    **- /api** contains flask endpoint called by the front end 
+    **- /data** contains training data for classification and summarization tasks 
+    **- /models**
+        **- /summarizer** 
+            - `fine_tune_t5_model.py` and `fine_tune_gpt2_model.py` include model training code + hyperparemeter adjustments
+            - `run_summarizer_gpt2.py` and `run_summarizer_t5.py` call saved models for use in API
+            - `compare_models.py` performs human feedback testing on models
+        **- /classifier**
+            - `run_classifier.py` and `run_gpt_classifier.py` calls saved naieve bayes models and gpt for use in API
+            - `naive_bayes_model.json` saved instance of trained model
+            - `compare_classifiers.py` runs tests between models to determine performance on test set
+
+**/frontend** contants nextJS project which can be run by instructions below
+
+
+## Project Setup
+To run this project, follow the steps below:
+
+### Configure the Environment
+
+Create a `.env` file in the project root directory and add your **OpenAI API key**:
+\`\`\`bash
+OPENAI_API_KEY=your_openai_api_key
+\`\`\`
+
+---
+
+## Running the Project Demo
+
+### Backend Setup
+Navigate to the project root directory and start the backend:
+\`\`\`bash
+python -m backend.api.app
+\`\`\`
+
+### Frontend Setup
+Navigate to the `frontend` directory and start the frontend:
+\`\`\`bash
+cd frontend
+npm run dev
+\`\`\`
+
+### View the Live Site
+The live site will be available at:  
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+## Video Demonstration
+
+Check out the video demo of this project on YouTube:  
+[![Video Demo](https://img.youtube.com/vi/v0918xZb_fY/0.jpg)](https://www.youtube.com/watch?v=v0918xZb_fY)
+
+---
+
+## About This Project
+
+This project was built as part of a service-learning experience in a **Natural Language Processing (NLP) class**. The objective was to learn how to fine-tune and test machine learning models that solve real-world problems, specifically targeting the needs of older adults who may struggle with email management.
+
+By combining modern NLP techniques with practical applications, this project aims to improve accessibility and reduce the cognitive load associated with email communication.
+
+---
