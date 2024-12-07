@@ -57,7 +57,7 @@ To run this project, follow the steps below:
 
 ### 1. Configure Environment
 
-Create a `.env` file in the project root directory and add your **OpenAI API key**:
+Create a `.env` file in the root of the backend/api direcotry and add your **OpenAI API key**:
 ```
 OPENAI_API_KEY=your_openai_api_key
 ```
