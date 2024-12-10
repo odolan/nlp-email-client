@@ -7,7 +7,7 @@ We explore various machine learning and natural language processing (NLP) models
 
 - **Spam Classification**:
   - **Naive Bayes**: A simple, traditional machine learning approach.
-  - **GPT-3.5**: A state-of-the-art language model by OpenAI, fine-tuned for spam classification.
+  - **GPT-3.5**: A state-of-the-art language model by OpenAI
   
 - **Email Summarization**:
   - **GPT-2**: An earlier generation of the GPT family, fine-tuned for text summarization.
